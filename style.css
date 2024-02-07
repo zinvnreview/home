@@ -13,6 +13,9 @@ body{
   
 background-image:url('https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?cs=srgb&dl=pexels-peng-liu-169647.jpg&fm=jpg')
 }
+.link {
+  text-decoration: none;
+}
 
 h1{
   text-align: center;
