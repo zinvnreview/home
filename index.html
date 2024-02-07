@@ -9,9 +9,6 @@
 </head>
 <body>
     <div class="coming-soon">
-        <div class="link" style="list-style: none;">
-            <a href="https://www.youtube.com/@ZinVnReview" target="_blank" rel="noopener noreferrer">Zin Review</a>
-        </div>
         <h1>Web đang được xây dựng</h1>
         <div class="coutdown">
 
@@ -35,8 +32,8 @@
     </div>
     <script>
         function coutdown(){
-    const countDate = new Date('13/2/2024');
-    const now = new Date();
+    const countDate = new Date('13/2/2024').getDate;
+    const now = new Date().getDate;
     const gap = countDate - now;
 
     const second = 1000;
