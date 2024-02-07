@@ -1,24 +1,18 @@
-var clock = new Vue({
-    el: '#clock',
-    data: {
-        time: '',
-        date: ''
-    }
-});
+function coutdown(){
+    const countDate = new Date('1 Jan,2025 00:00:00').getTime();
+    const now = new Date().getTime();
+    const gap = countDate - now;
 
-var week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-var timerID = setInterval(updateTime, 1000);
-updateTime();
-function updateTime() {
-    var cd = new Date();
-    clock.time = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2);
-    clock.date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth()+1, 2) + '-' + zeroPadding(cd.getDate(), 2) + ' ' + week[cd.getDay()];
-};
+    const second = 1000;
+    const minute = second * 60;
+    const hour = minute * 60;
+    const day = hour * 24;
 
-function zeroPadding(num, digit) {
-    var zero = '';
-    for(var i = 0; i < digit; i++) {
-        zero += '0';
-    }
-    return (zero + num).slice(-digit);
+    document.getElementById('day').innerHTML = Math.floor(gap / day);
+    document.getElementById('hour').innerHTML = Math.floor((gap % day) / hour);
+    document.getElementById('minute').innerHTML = Math.floor((gap % hour) / minute);
+    document.getElementById('second').innerHTML = Math.floor((gap % minute) / second);
+    setInterval(coutdown, 1000);
 }
+
+coutdown()
