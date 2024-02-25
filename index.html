@@ -73,6 +73,8 @@ body{
 .day,.hour,.minute,.second{
   font-size: 4rem;
 }
+#qrcode {
+    margin-top: 20px;
     </style>
 <body>
   <div class="qr">
@@ -98,6 +100,7 @@ body{
                 <p id="second" class="second"></p>
                 <span>Giây</span>
             </div>
+            <div class="qrocdeapp" id="qrcode"></div>
         </div>
     </div>
   </div>
@@ -117,6 +120,18 @@ body{
     document.getElementById('minute').innerHTML = Math.floor((gap % hour) / minute);
     document.getElementById('second').innerHTML = Math.floor((gap % minute) / second);
     setInterval(coutdown, 1000);
+var qrcodeDiv = document.getElementById("qrcode");
+
+var appDownloadURL = "https://zinvnreview.github.io/home/";
+
+var qrcode = new QRCode(qrcodeDiv, {
+    text: appDownloadURL,
+    width: 256,
+    height: 256,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+});
 }
 
 coutdown()
