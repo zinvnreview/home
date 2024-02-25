@@ -4,125 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zin Review</title>
-</head>
     <style>
-          *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body{
-  font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image:url('https://wallpapers.com/images/hd/chill-music-background-8c0wruckxb7cx6py.jpg');
-  background-size: cover;
-}
-.link {
-  text-decoration: none;
-}
-.coming-soon{
-  text-transform: capitalize;
-  width: max-content;
-  height: max-content;
-  color:white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.coutdown{
-  display: flex;
-  padding: 10px;
-  font-size: 18px;
-  justify-content: space-around;
-  text-align: center;
-}
-.qr{
-  padding: 60px;
-  background: rgba(0,0,0,00.5);
-  border-radius:10px;
-  text-align: center;
-}
-.qr img {
-    width: 160px;
-    height: 200px;
-    box-shadow: 2px 3px rgb(74, 245, 148);
-    border-radius: 15px;
-}
-.qr p {
-  font-size: 20px;
-  color: white;
-  font-weight: 700;
-  text-shadow: 0 0 10px rgb(6, 248, 111);
-  font-family: 'Times New Roman', Times, serif;
-}
-.container-day,.container-hour,.container-minute,.container-second{
- 
-  padding: 1rem 2rem;
-  margin: 0 15px;
-  border: 1px solid;
-  text-shadow: 0 0 10px rgb(6, 248, 111);
-  border-radius: 10px;
-  background-image: url("https://th.bing.com/th?id=OIF.%2f%2fJd51efLJvkTwnQzszzfg&w=252&h=180&c=7&r=0&o=5&pid=1.7");
-} 
-.day,.hour,.minute,.second{
-  font-size: 4rem;
-}
-.qrcode {
-    margin-top: 20px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('https://wallpapers.com/images/hd/chill-music-background-8c0wruckxb7cx6py.jpg');
+            background-size: cover;
+        }
+        .link {
+            text-decoration: none;
+        }
+        .coming-soon {
+            text-transform: capitalize;
+            width: max-content;
+            height: max-content;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .coutdown {
+            display: flex;
+            padding: 10px;
+            font-size: 18px;
+            justify-content: space-around;
+            text-align: center;
+        }
+        .qr {
+            padding: 60px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .qr img {
+            width: 160px;
+            height: 200px;
+            box-shadow: 2px 3px rgb(74, 245, 148);
+            border-radius: 15px;
+        }
+        .qr p {
+            font-size: 20px;
+            color: white;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgb(6, 248, 111);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .container-day,
+        .container-hour,
+        .container-minute,
+        .container-second {
+            padding: 1rem 2rem;
+            margin: 0 15px;
+            border: 1px solid;
+            text-shadow: 0 0 10px rgb(6, 248, 111);
+            border-radius: 10px;
+            background-image: url("https://th.bing.com/th?id=OIF.%2f%2fJd51efLJvkTwnQzszzfg&w=252&h=180&c=7&r=0&o=5&pid=1.7");
+        }
+        .day,
+        .hour,
+        .minute,
+        .second {
+            font-size: 4rem;
+        }
+        .qrcode {
+            margin-top: 20px;
+        }
     </style>
+</head>
 <body>
-  <div class="qr">
-    <img src="qr.jpg" alt="qr">
-    <p>Ae ủng hộ mik 1 ly caffe để có động lực ra nhiều video
-      và nâng cấp<br>web với nâng cấp app để ae xem những video mới nhất nhé</p>
-  <p>Nâng cấp web vs app sẽ có nhiều cái hay đang đợi ae nhé</p>
-    <div class="coming-soon">
-        <div class="coutdown">
-            <div class="container-day">
-                <p id="day" class="day"></p>
-                <span>Ngày</span>
+    <div class="qr">
+        <img src="qr.jpg" alt="qr">
+        <p>Ae ủng hộ mik 1 ly caffe để có động lực ra nhiều video và nâng cấp<br>web với nâng cấp app để ae xem những video mới nhất nhé</p>
+        <p>Nâng cấp web vs app sẽ có nhiều cái hay đang đợi ae nhé</p>
+        <div class="coming-soon">
+            <div class="coutdown">
+                <div class="container-day">
+                    <p id="day" class="day"></p>
+                    <span>Ngày</span>
+                </div>
+                <div class="container-hour">
+                    <p id="hour" class="hour"></p>
+                    <span>Giờ</span>
+                </div>
+                <div class="container-minute">
+                    <p id="minute" class="minute"></p>
+                    <span>Phút</span>
+                </div>
+                <div class="container-second">
+                    <p id="second" class="second"></p>
+                    <span>Giây</span>
+                </div>
+                <div class="qrcode">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://https://zinvnreview.github.io/home" alt="QR Code">
+                </div>
             </div>
-            <div class="container-hour">
-                <p id="hour" class="hour"></p>
-                <span>Giờ</span>
-            </div>
-            <div class="container-minute">
-                <p id="minute" class="minute"></p>
-                <span>Phút</span>
-            </div>
-            <div class="container-second">
-                <p id="second" class="second"></p>
-                <span>Giây</span>
-            </div>
-            <div class="qrcode">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://https://zinvnreview.github.io/home" alt="QR Code">
-          </div>
         </div>
     </div>
-  </div>
     <script>
-        function coutdown(){
-    const countDate = new Date('20 Feb,2024 11:00:00').getTime();
-    const now = new Date().getTime();
-    const gap = countDate - now;
+        function countdown() {
+            const countDate = new Date('20 Feb, 2024 11:00:00').getTime();
+            const now = new Date().getTime();
+            const gap = countDate - now;
 
-    const second = 1000;
-    const minute = second * 60;
-    const hour = minute * 60;
-    const day = hour * 24;
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+            const day = hour * 24;
 
-    document.getElementById('day').innerHTML = Math.floor(gap / day);
-    document.getElementById('hour').innerHTML = Math.floor((gap % day) / hour);
-    document.getElementById('minute').innerHTML = Math.floor((gap % hour) / minute);
-    document.getElementById('second').innerHTML = Math.floor((gap % minute) / second);
-    setInterval(coutdown, 1000);
-
+            document.getElementById('day').innerHTML = Math.floor(gap / day);
+            document.getElementById('hour').innerHTML = Math.floor((gap % day) / hour);
+            document.getElementById('minute').innerHTML = Math.floor((gap % hour) / minute);
+            document.getElementById('second').innerHTML = Math.floor((gap % minute) / second);
+        }
+        setInterval(countdown, 1000);
     </script>
 </body>
 </html>
