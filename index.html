@@ -117,10 +117,12 @@
             const second = 1000;
             const minute = second * 60;
             const hour = minute * 60;
+            const day = hour * 24;
 
-            document.getElementById('hour').innerHTML = Math.floor((day) / hour);
-            document.getElementById('minute').innerHTML = Math.floor((hour) / minute);
-            document.getElementById('second').innerHTML = Math.floor((minute) / second);
+            document.getElementById('day').innerHTML = Math.floor( day);
+            document.getElementById('hour').innerHTML = Math.floor(hour);
+            document.getElementById('minute').innerHTML = Math.floor(minute);
+            document.getElementById('second').innerHTML = Math.floor(second);
         }
         setInterval(countdown, 1000);
     </script>
